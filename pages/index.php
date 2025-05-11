@@ -14,7 +14,7 @@
 <body>
     <!-- Navbar -->
     <header>
-        <h1>Halal <span>Travel</span></h1>
+        <h1>Halal<span>Travel</span></h1>
         <nav>
             <ul>
                 <li>
@@ -46,11 +46,25 @@
     </header>
 
     <!-- HomePage -->
-    <section class="home">
-        <div>
-            <img src="../assets/img/masjid.jpeg" alt="" class="img-home">
-        </div>
-    </section>
+    <main>
+        <section class="home">
+            <div class="container-img">
+                <img src="../assets/img/tajmahal.jpg" alt="" class="img-home">
+                <div class="box-search">
+                    <div class="search">
+                        <form action="">
+                            <input type="text" placeholder="Discover your dream destination with a touch of halal elegance..">
+                        </form>
+                        <button>
+                            <img src="../assets/icons/search.svg" alt="search" class="icon-search">
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
     <script src="../assets/js/index.js"></script>
 </body>
 
