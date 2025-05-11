@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['logout'])){
+if (isset($_POST['logout'])) {
     $_SESSION['username'] = '';
     header('location:login.php');
 }
@@ -29,18 +29,18 @@ if(isset($_POST['logout'])){
                     <a href="" id="active">Home</a>
                 </li>
                 <li>
-                    <a href="">Destinations</a>
+                    <a href="#destination">Destinations</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="">Halal</a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
             </ul>
         </nav>
         <?php
-        if(empty($_SESSION['username'])){
+        if (empty($_SESSION['username'])) {
         ?>
         <div class="btn-login">
             <a href="./login.php">
@@ -48,20 +48,20 @@ if(isset($_POST['logout'])){
                     Login
                 </button>
             </a>
-            <a href="register.php">
+            <a href="">
                 <button>
                     Create Account
                 </button>
             </a>
         </div>
         <?php
-        }else{
+        } else {
         ?>
-        <div class="btn-login">
-            <form action="index.php" method='POST'>
-                <input type="submit" value="logout" name='logout'>
-            </form>
-        </div>
+            <div class="btn-login">
+                <form action="index.php" method='POST'>
+                    <input type="submit" value="Logout" name='logout' class="logout">
+                </form>
+            </div>
         <?php
         }
         ?>
@@ -162,9 +162,54 @@ if(isset($_POST['logout'])){
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="box-card">
+                        <img src="../assets/img/turkey.jpg" alt="turkey" class="img-card">
+                    </div>
+                    <div class="card-desc">
+                        <h1>Turkey National Park</h1>
+                        <div class="desc">
+                            <div class="star">
+                                <img src="../assets/icons/star.svg" alt="">
+                                <h4>4.9 ratings</h4>
+                            </div>
+                            <div class="location">
+                                <img src="../assets/icons/location.svg" alt="">
+                                <h4>Turkey,Istanbull</h4>
+                            </div>
+                        </div>
+                        <div class="footer-desc">
+                            <div class="price">
+                                <h3>$23.59</h3>
+                            </div>
+                            <button>View Detail</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div id="about">
+            <div class="f1">
+                <h1><span>Halal</span>Travel</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quas!</p>
+            </div>
+            <div class="f1">
+                <h3>About</h3>
+                <li><a href="">How to Travel</a></li>
+                <li><a href="">We price match</a></li>
+                <li><a href="">refer a friend</a></li>
+            </div>
+            <div class="f1">
+                <h3>Info</h3>
+                <li><a href="">Privacy & Condition Polities</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact Us</a></li>
+            </div>
+        </div>
+    </footer>
 
     <script src="../assets/js/index.js"></script>
 </body>
