@@ -11,31 +11,8 @@
 <!-- <form action="../feature/register.php" method="POST"> -->
 <!-- <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
-        <input type="submit" name="register" value="Register"> -->
-
-<body>
-    <div class="container">
-        <form action="../feature/register.php" class="form-register" method='POST'>
-            <div class="img-icons">
-                <img src="../assets/img/muslim.png" alt="" class="mesjid">
-            </div>
-            <div class="inputnya">
-                <label for="username">Username</label>
-                <input type="text" placeholder="Username" name='username' maxlength="30">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Email" name='email' minlength="8" maxlength="15">
-                <label for="password">Password</label>
-                <input type="password" placeholder="Password" name='password' minlength="8" maxlength="15">
-            </div>
-            <div class="btn">
-                <button type="submit" value="Login" name='login'>Register</button>
-                <div>
-                    <p>Do you already have an account?<a href=""> Sign In</a></p>
-                </div>
-            </div>
-            <p><?php echo $login_in ?></p>
-        </form>
-    </div>
+        <input type="submit" name="register" value="Register">
+        <p><?php echo $register_in ?></p>
     </form>
 </body>
 

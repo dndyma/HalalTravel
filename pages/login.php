@@ -28,7 +28,7 @@
                     <p>Forgot password</p>
                 </div>
             </div>
-            <p><?php echo $login_in ?></p>
+            <p><?php include '../feature/login.php'; echo $login_in ?></p>
         </form>
     </div>
 </body>
