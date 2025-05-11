@@ -21,7 +21,7 @@
                     <label for="username">Username</label>
                     <input type="text" placeholder="Username" name='username' maxlength="30">
                     <label for="email">Email</label>
-                    <input type="email" placeholder="Email" name='email' minlength="8" maxlength="15">
+                    <input type="email" placeholder="Email" name='email' maxlength="15">
                     <label for="password">Password</label>
                     <input type="password" placeholder="Password" name='password' minlength="8" maxlength="15">
                 </div>
