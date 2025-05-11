@@ -6,6 +6,7 @@ $register_in='';
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $role = 'user';
     if(empty($username) || empty($password)){
         $register_in = 'form tidak boleh kosong';
     }
@@ -17,7 +18,7 @@ if (isset($_POST['register'])) {
         }
         $id+=1;
         $id_user = 'user_'.$id;
-        $sql = "INSERT into user value('$id_user','$username','$password')";
+        $sql = "INSERT into user value('$id_user','$username','$password','$role')";
         $result = $db->query($sql);
         header('location:index.php');
     }
