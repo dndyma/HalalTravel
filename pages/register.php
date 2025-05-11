@@ -28,7 +28,7 @@
                 <div class="btn">
                     <button type="submit" value="Login" name='login'>Register</button>
                     <div>
-                        <p>Do you already have an account?<a href=""> Sign In</a></p>
+                        <p>Do you already have an account?<a href="login.php"> Sign In</a></p>
                     </div>
                 </div>
                 <p><?php include '../feature/register.php';
