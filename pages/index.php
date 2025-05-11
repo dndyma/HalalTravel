@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,18 +36,18 @@
         session_start();
         if (empty($_SESSION['username'])) {
         ?>
-        <div class="btn-login">
-            <a href="./login.php">
-                <button class="login">
-                    Login
-                </button>
-            </a>
-            <a href="register.php">
-                <button>
-                    Create Account
-                </button>
-            </a>
-        </div>
+            <div class="btn-login">
+                <a href="./login.php">
+                    <button class="login">
+                        Login
+                    </button>
+                </a>
+                <a href="register.php">
+                    <button>
+                        Create Account
+                    </button>
+                </a>
+            </div>
         <?php
         } else {
         ?>
@@ -104,7 +103,7 @@
                             <div class="price">
                                 <h3>$23.59</h3>
                             </div>
-                            <button>View Detail</button>
+                            <a href="detail.php"><button>View Detail</button></a>
                         </div>
                     </div>
                 </div>

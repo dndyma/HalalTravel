@@ -1,0 +1,233 @@
+/* Header & Navbar */
+header {
+    padding: 10px 40px;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    color:var(--ijau)
+}
+header h1 span {
+    color:var(--oren);
+}
+
+header nav {
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+header nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a{
+    color: var(--abu);
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    opacity: 80%;
+}
+
+header nav ul li #active{
+    color: var(--hytam);
+    text-decoration: none;
+}
+
+header .btn-login button {
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+    border-radius: 6px;
+    border: none;
+    padding:10px;
+    background-color:var(--ijau) ;
+
+}
+
+header .btn-login .logout{
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+    border-radius: 6px;
+    border: none;
+    padding:10px;
+    background-color:var(--ijau) ;
+
+}
+
+header .btn-login .login {
+    border:1px solid var(--bdwhite);
+    background-color: white;
+    color:#333333;
+    transition-duration: 0.5s;
+}
+header .btn-login .login:hover {
+    background-color: var(--ijau);
+    color:white;
+}
+
+/* Homepage */
+main {
+    background-color: var(--tung);
+}
+main .home {
+    width: 100%;
+    padding: 10px;
+}
+
+main .home .img-home {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+main .home .container-img {
+    position: relative;
+}
+
+main .box-search {
+    bottom: -40px;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+main .box-search .search  {
+    position: relative;
+    width: 70%;
+}
+
+
+main .box-search .search input {
+    transition: ease-in-out .5s;
+    color:var(--hytam);
+    outline: none;
+    box-shadow: 1px 1px 3px rgba(71, 71, 71, 0.562);
+    width: 100%;
+    border: 1px solid var(--bdwhite);
+    border-radius: 6px;
+    padding: 20px;
+    font-size: medium;
+}
+
+main .box-search .search input:focus {
+    outline: 1px solid var(--oren);
+}
+
+main .box-search .search button .icon-search {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+
+main .destination {
+    background-color: var(--tung);
+    height: 100%;
+    padding: 30px;
+}
+
+main .destination .container-destination {
+    padding: 50px 10px;
+}
+
+main .destination .container-destination h1{
+    font-size: 40px;
+    padding-bottom: 5px;
+    color:var(--hytam);
+}
+
+
+main .destination .container-destination .detail-destination div  {
+    display: flex;
+    align-items: center;
+}
+
+main .destination .container-destination .detail-destination div img {
+    width: 30px;
+    height: 30px;
+}
+
+main .destination .container-destination .blob-destination {
+    padding:10px;
+    display: flex;
+    gap:10px;
+}
+main .destination .container-destination .blob-destination div {
+    border-radius: 10px;
+    border: 1px solid var(--bdwhite);
+    padding:8px 10px;
+    background-color: var(--hytam);
+    color:white;
+}
+
+main .destination .container-destination  .desc-destination p{
+    opacity: 80%;
+    text-align: justify;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 250px;
+    padding:30px;
+    background-color: var(--hytam);
+    
+    color:white;
+}
+footer li {
+    list-style: none;
+}
+footer p {
+    width: 200px;
+    font-weight: 200;
+}
+
+footer a {
+    text-decoration: none;
+    color:white;
+    font-weight: 200;
+}
+
+footer a:hover {
+    opacity: 80%;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+}
+footer div .f1 {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+footer div .f1 h3 {
+    font-weight: bold;
+}
+footer div .f1 h1 {
+    color:var(--oren);
+}
+footer div .f1 h1 span {
+    color:var(--ijau);
+}
