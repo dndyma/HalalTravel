@@ -1,24 +1,3 @@
-<?php
-include '../db/koneksi.php';
-session_start();
-$login_in = '';
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    if (empty($username) || empty($password)) {
-        $login_in = 'harap data di isi dengan lengkap';
-    } else {
-        $sql = "SELECT * from user where username_user='$username' and password_user = '$password'";
-        $result = $db->query($sql);
-        if ($result->num_rows > 0) {
-            $_SESSION['username'] = $username;
-            header('location:index.php');
-        } else {
-            $login_in = 'akun tidak di temukan';
-        }
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +11,7 @@ if (isset($_POST['login'])) {
 
 <body>
     <div class="container">
-        <form action="login.php" class="form-login" method='POST'>
+        <form action="../feature/login.php" class="form-login" method='POST'>
             <div class="img-icons">
                 <img src="../assets/img/muslim.png" alt="" class="mesjid">
             </div>
