@@ -36,10 +36,22 @@ if (isset($_POST['login'])) {
 <body>
     <div class="container">
         <form action="login.php" class="form-login" method='POST'>
-            <p>Login To Continue</p>
-            <input type="text" placeholder="Username" name='username'>
-            <input type="password" placeholder="Password" name='password'>
-            <input type="submit" value="Login" name='login'>
+            <div class="img-icons">
+                <img src="../assets/img/muslim.png" alt="" class="mesjid">
+            </div>
+            <div class="inputnya">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" name='username'>
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" name='password'>
+            </div>
+            <div class="btn">
+                <button type="submit" value="Login" name='login'>Login</button>
+                <div>
+                    <p>Don't have an account? <a href="">Sign Up</a></p>
+                    <p>Forgot password</p>
+                </div>
+            </div>
             <p><?php echo $login_in ?></p>
         </form>
     </div>
