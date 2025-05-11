@@ -2,6 +2,7 @@
 session_start();
 if(isset($_POST['logout'])){
     $_SESSION['username'] = '';
+    header('location:login.php');
 }
 ?>
 <!DOCTYPE html>
@@ -47,7 +48,7 @@ if(isset($_POST['logout'])){
                     Login
                 </button>
             </a>
-            <a href="">
+            <a href="register.php">
                 <button>
                     Create Account
                 </button>
