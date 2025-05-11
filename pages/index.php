@@ -30,11 +30,11 @@ if (isset($_POST['logout'])) {
                 <li>
                     <a href="#destination">Destinations</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="">Halal</a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
             </ul>
         </nav>
@@ -190,7 +190,7 @@ if (isset($_POST['logout'])) {
     </main>
 
     <footer>
-        <div>
+        <div id="about">
             <div class="f1">
                 <h1><span>Halal</span>Travel</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quas!</p>

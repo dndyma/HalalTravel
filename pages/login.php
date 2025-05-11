@@ -41,9 +41,9 @@ if (isset($_POST['login'])) {
             </div>
             <div class="inputnya">
                 <label for="username">Username</label>
-                <input type="text" placeholder="Username" name='username'>
+                <input type="text" placeholder="Username" name='username' minlength="8" maxlength="15">
                 <label for="password">Password</label>
-                <input type="password" placeholder="Password" name='password'>
+                <input type="password" placeholder="Password" name='password' minlength="8" maxlength="15">
             </div>
             <div class="btn">
                 <button type="submit" value="Login" name='login'>Login</button>
