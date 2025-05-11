@@ -42,18 +42,18 @@ if (isset($_POST['logout'])) {
         <?php
         if (empty($_SESSION['username'])) {
         ?>
-        <div class="btn-login">
-            <a href="./login.php">
-                <button class="login">
-                    Login
-                </button>
-            </a>
-            <a href="">
-                <button>
-                    Create Account
-                </button>
-            </a>
-        </div>
+            <div class="btn-login">
+                <a href="./login.php">
+                    <button class="login">
+                        Login
+                    </button>
+                </a>
+                <a href="../pages/register.php">
+                    <button>
+                        Create Account
+                    </button>
+                </a>
+            </div>
         <?php
         } else {
         ?>
