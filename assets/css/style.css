@@ -9,6 +9,7 @@
   --oren:#ff9500;
   --ijau: #00AD9F;
   --hytam:#072830;
+  --tung:#F9FBFC;
   --bdwhite: rgb(224, 224, 224);
 }
 
@@ -141,4 +142,92 @@ main .box-search .search button .icon-search {
     right: 10px;
     width: 30px;
     height: 30px;
+}
+
+
+main .destination {
+    background-color: var(--tung);
+    height: 100%;
+    padding: 30px;
+}
+
+main .destination .container-destination {
+    padding: 50px 10px;
+}
+
+main .destination .container-destination h1{
+    font-size: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid  rgba(121, 121, 121, 0.233);
+    color:var(--hytam);
+}
+
+main .destination  .card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+main .destination .card {
+    overflow: hidden;
+    color: var(--hytam);
+    width: 300px;
+    border: 1px solid var(--bdwhite);
+}
+
+main .destination .card .box-card {
+    width: 300px;
+}
+
+main .destination .card .box-card .img-card {
+    width: 100%;
+    height: 300px;
+}
+
+main .destination .card .card-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding:15px;
+}
+main .destination .card .card-desc  .desc {
+    font-size: small;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+main .destination .card .card-desc  .desc div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap:5px;
+}
+main .destination .card .card-desc  .desc img{
+    width: 20px;
+    height: 20px;
+}
+
+main .destination .card .card-desc .footer-desc {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    display: flex;
+}
+main .destination .card .card-desc .footer-desc button {
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: white;
+    padding:10px;
+    font-weight: bold;
+    color: var(--hytam);
+    transition: ease-in-out .5s;
+    border: 1px solid var(--bdwhite);
+}
+main .destination .card .card-desc .footer-desc button:hover {
+    color:white;
+    background-color: var(--oren);
 }

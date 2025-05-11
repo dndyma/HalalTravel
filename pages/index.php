@@ -57,7 +57,86 @@
                     </div>
                 </div>
             </div>
+        </section>
 
+        <section class="destination">
+            <div class="container-destination">
+                <h1 id="destination"><span>Explore</span> Your Destinations.</h1>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <div class="box-card">
+                        <img src="../assets/img/turkey.jpg" alt="turkey" class="img-card">
+                    </div>
+                    <div class="card-desc">
+                        <h1>Turkey National Park</h1>
+                        <div class="desc">
+                            <div class="star">
+                                <img src="../assets/icons/star.svg" alt="">
+                                <h4>4.9 ratings</h4>
+                            </div>
+                            <div class="location">
+                                <img src="../assets/icons/location.svg" alt="">
+                                <h4>Turkey,Istanbull</h4>
+                            </div>
+                        </div>
+                        <div class="footer-desc">
+                            <div class="price">
+                                <h3>$23.59</h3>
+                            </div>
+                            <button>View Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box-card">
+                        <img src="../assets/img/turkey.jpg" alt="turkey" class="img-card">
+                    </div>
+                    <div class="card-desc">
+                        <h1>Turkey National Park</h1>
+                        <div class="desc">
+                            <div class="star">
+                                <img src="../assets/icons/star.svg" alt="">
+                                <h4>4.9 ratings</h4>
+                            </div>
+                            <div class="location">
+                                <img src="../assets/icons/location.svg" alt="">
+                                <h4>Turkey,Istanbull</h4>
+                            </div>
+                        </div>
+                        <div class="footer-desc">
+                            <div class="price">
+                                <h3>$23.59</h3>
+                            </div>
+                            <button>View Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box-card">
+                        <img src="../assets/img/turkey.jpg" alt="turkey" class="img-card">
+                    </div>
+                    <div class="card-desc">
+                        <h1>Turkey National Park</h1>
+                        <div class="desc">
+                            <div class="star">
+                                <img src="../assets/icons/star.svg" alt="">
+                                <h4>4.9 ratings</h4>
+                            </div>
+                            <div class="location">
+                                <img src="../assets/icons/location.svg" alt="">
+                                <h4>Turkey,Istanbull</h4>
+                            </div>
+                        </div>
+                        <div class="footer-desc">
+                            <div class="price">
+                                <h3>$23.59</h3>
+                            </div>
+                            <button>View Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
