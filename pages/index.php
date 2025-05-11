@@ -32,12 +32,16 @@
             </ul>
         </nav>
         <div class="btn-login">
-            <button class="login">
-                Login
-            </button>
-            <button>
-                Create Account
-            </button>
+            <a href="login.php">
+                <button class="login">
+                    Login
+                </button>
+            </a>
+            <a href="">
+                <button>
+                    Create Account
+                </button>
+            </a>
         </div>
     </header>
 
