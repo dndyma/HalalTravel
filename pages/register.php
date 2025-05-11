@@ -21,7 +21,7 @@
                     <label for="username">Username</label>
                     <input type="text" placeholder="Username" name='username' maxlength="30">
                     <label for="email">Email</label>
-                    <input type="email" placeholder="Email" name='email' maxlength="15">
+                    <input type="email" placeholder="Email" name='email'>
                     <label for="password">Password</label>
                     <input type="password" placeholder="Password" name='password' minlength="8" maxlength="15">
                 </div>
@@ -31,7 +31,8 @@
                         <p>Do you already have an account?<a href=""> Sign In</a></p>
                     </div>
                 </div>
-                <p><?php include '../feature/register.php'; echo $register_in?></p>
+                <p><?php include '../feature/register.php';
+                    echo $register_in ?></p>
             </form>
         </div>
         </form>
