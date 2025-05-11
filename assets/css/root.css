@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --abu:#929898;
+  --oren:#ff9500;
+  --ijau: #00AD9F;
+  --hytam:#072830;
+  --tung:#F9FBFC;
+  --bdwhite: rgb(224, 224, 224);
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
