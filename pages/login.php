@@ -1,29 +1,30 @@
 <?php
-    include 'koneksi.php';
-    session_start();
-    $login_in= '';
-    if(isset($_POST['login'])){
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        if(empty($username)||empty($password)){
-            $login_in = 'harap data di isi dengan lengkap';
-        }else{
-            $sql = "SELECT * from user where username_user='$username' and password_user = '$password'";
-            $result = $db->query($sql);
-            if($result->num_rows>0){
-                $_SESSION['username'] = $username;
-                header('location:index.php');
-            }else{
-                $login_in = 'akun tidak di temukan';
-            }
+include '../db/koneksi.php';
+session_start();
+$login_in = '';
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if (empty($username) || empty($password)) {
+        $login_in = 'harap data di isi dengan lengkap';
+    } else {
+        $sql = "SELECT * from user where username_user='$username' and password_user = '$password'";
+        $result = $db->query($sql);
+        if ($result->num_rows > 0) {
+            $_SESSION['username'] = $username;
+            header('location:index.php');
+        } else {
+            $login_in = 'akun tidak di temukan';
         }
     }
+}
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +37,8 @@
             font-family: sans-serif;
         }
 
-        body, html {
+        body,
+        html {
             height: 100%;
             width: 100%;
         }
@@ -46,7 +48,7 @@
             width: 100%;
             height: 100vh;
             display: flex;
-            justify-content: flex-end; 
+            justify-content: flex-end;
             align-items: center;
         }
 
@@ -59,13 +61,14 @@
         }
 
         .form-login {
-            background-color: rgba(255, 255, 255,1); /* semi transparan */
+            background-color: rgba(255, 255, 255, 1);
+            /* semi transparan */
             padding: 30px;
             border-radius: 30px;
             margin-right: 80px;
             width: 500px;
-            text-align:center;
-            height:500px
+            text-align: center;
+            height: 500px
         }
 
         .form-login input[type="text"],
@@ -89,17 +92,20 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <img src="../assets/img/masjid.jpeg" class="img-login" alt="Background">
+        <img src="../assets/img/tajmahal.jpg" class="img-login" alt="Background">
         <form action="login.php" class="form-login" method='POST'>
             <p>Login To Continue</p>
             <input type="text" placeholder="Username" name='username'>
             <input type="password" placeholder="Password" name='password'>
             <input type="submit" value="Login" name='login'>
-            <p><?php echo $login_in?></p>
+            <p><?php echo $login_in ?></p>
         </form>
     </div>
 </body>
+
 </html>
+
 </html>
