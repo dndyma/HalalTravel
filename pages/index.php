@@ -61,7 +61,6 @@
         }
         ?>
     </header>
-
     <!-- HomePage -->
     <main>
         <section class="home">
