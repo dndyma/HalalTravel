@@ -31,7 +31,7 @@
                         <p>Do you already have an account?<a href=""> Sign In</a></p>
                     </div>
                 </div>
-                <p><?php echo $login_in ?></p>
+                <p><?php include '../feature/register.php'; echo $register_in?></p>
             </form>
         </div>
         </form>
