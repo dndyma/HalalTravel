@@ -26,7 +26,7 @@
                     <input type="password" placeholder="Password" name='password' minlength="8" maxlength="15">
                 </div>
                 <div class="btn">
-                    <button type="submit" value="Login" name='login'>Register</button>
+                    <button type="submit" value="Login" name='register'>Register</button>
                     <div>
                         <p>Do you already have an account?<a href="login.php"> Sign In</a></p>
                     </div>
