@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_POST['logout'])){
+    $_SESSION['username'] = '';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +37,9 @@
                 </li>
             </ul>
         </nav>
+        <?php
+        if(empty($_SESSION['username'])){
+        ?>
         <div class="btn-login">
             <a href="login.php">
                 <button class="login">
@@ -43,6 +52,17 @@
                 </button>
             </a>
         </div>
+        <?php
+        }else{
+        ?>
+        <div class="btn-login">
+            <form action="index.php" method='POST'>
+                <input type="submit" value="logout" name='logout'>
+            </form>
+        </div>
+        <?php
+        }
+        ?>
     </header>
 
     <!-- HomePage -->
