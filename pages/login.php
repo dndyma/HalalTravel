@@ -1,3 +1,27 @@
+<?php
+    include 'koneksi.php';
+    session_start();
+    $login_in= '';
+    if(isset($_POST['login'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        if(empty($username)||empty($password)){
+            $login_in = 'harap data di isi dengan lengkap';
+        }else{
+            $sql = "SELECT * from user where username_user='$username' and password_user = '$password'";
+            $result = $db->query($sql);
+            if($result->num_rows>0){
+                $_SESSION['username'] = $username;
+                header('location:index.php');
+            }else{
+                $login_in = 'akun tidak di temukan';
+            }
+        }
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,11 +59,13 @@
         }
 
         .form-login {
-            background-color: rgba(255, 255, 255, 0.5); /* semi transparan */
+            background-color: rgba(255, 255, 255,1); /* semi transparan */
             padding: 30px;
-            border-radius: 10px;
+            border-radius: 30px;
             margin-right: 80px;
             width: 500px;
+            text-align:center;
+            height:500px
         }
 
         .form-login input[type="text"],
@@ -66,11 +92,12 @@
 <body>
     <div class="container">
         <img src="../assets/img/masjid.jpeg" class="img-login" alt="Background">
-        <form action="" class="form-login">
-            <p>login</p>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
-            <input type="submit" value="Login">
+        <form action="login.php" class="form-login" method='POST'>
+            <p>Login To Continue</p>
+            <input type="text" placeholder="Username" name='username'>
+            <input type="password" placeholder="Password" name='password'>
+            <input type="submit" value="Login" name='login'>
+            <p><?php echo $login_in?></p>
         </form>
     </div>
 </body>
