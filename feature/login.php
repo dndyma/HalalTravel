@@ -5,9 +5,6 @@ $login_in = '';
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if(strlen($password)<=8){
-        $login_in = 'password harus lebih dari 8';
-    }
     if (empty($username) || empty($password)) {
         $login_in = 'harap data di isi dengan lengkap';
     } else {

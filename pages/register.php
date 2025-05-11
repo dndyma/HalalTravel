@@ -11,7 +11,7 @@
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="password" placeholder="Password">
         <input type="submit" name="register" value="Register">
-        <p><?php echo $register_in ?></p>
+        <p><?php include '../feature/register.php'; echo $register_in ?></p>
     </form>
 </body>
 </html>

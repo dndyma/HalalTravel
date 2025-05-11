@@ -1,10 +1,4 @@
-<?php
-session_start();
-if (isset($_POST['logout'])) {
-    $_SESSION['username'] = '';
-    header('location:login.php');
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,25 +34,26 @@ if (isset($_POST['logout'])) {
             </ul>
         </nav>
         <?php
+        session_start();
         if (empty($_SESSION['username'])) {
         ?>
-            <div class="btn-login">
-                <a href="./login.php">
-                    <button class="login">
-                        Login
-                    </button>
-                </a>
-                <a href="../pages/register.php">
-                    <button>
-                        Create Account
-                    </button>
-                </a>
-            </div>
+        <div class="btn-login">
+            <a href="./login.php">
+                <button class="login">
+                    Login
+                </button>
+            </a>
+            <a href="register.php">
+                <button>
+                    Create Account
+                </button>
+            </a>
+        </div>
         <?php
         } else {
         ?>
             <div class="btn-login">
-                <form action="index.php" method='POST'>
+                <form action="../feature/logout.php" method='POST'>
                     <input type="submit" value="Logout" name='logout' class="logout">
                 </form>
             </div>
