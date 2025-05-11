@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halal Travel</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <h1>Halal <span>Travel</span></h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="" id="active">Home</a>
+                </li>
+                <li>
+                    <a href="">Destinations</a>
+                </li>
+                <li>
+                    <a href="">Halal</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="btn-login">
+            <button class="login">
+                Login
+            </button>
+            <button>
+                Create Account
+            </button>
+        </div>
+    </header>
+
+    <!-- HomePage -->
+    <section class="home">
+        <div>
+            <img src="../assets/img/masjid.jpeg" alt="" class="img-home">
+        </div>
+    </section>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>
