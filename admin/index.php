@@ -2,7 +2,6 @@
 include '../db/koneksi.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,30 +57,30 @@ include '../db/koneksi.php';
                     <?php
                     $no = 0;
                     $sql = "SELECT * FROM destinasi";
-                    $result=$db->query($sql);
-                    if($result->num_rows>0){
-                        while($a=$result->fetch_assoc()){
-                            $no+=1;
+                    $result = $db->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($a = $result->fetch_assoc()) {
+                            $no += 1;
                     ?>
-                        <tr>
-                            <td><?php echo $no ?></td>
-                            <td><?php echo $a['tittle'] ?></td>
-                            <td><?php echo $a['lokasi'] ?> </td>
-                            <td><?php echo $a['harga'] ?></td>
-                            <td><?php echo $a['rating'] ?></td>
-                            <td>
-                                <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
-                                    <button>Detail</button>
-                                </a>
-                                <a href="edit_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
-                                    <button>Edit</button>
-                                </a>
-                                <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
-                                    <button class="btn2" >Delete</button>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php      
+                            <tr>
+                                <td><?php echo $no ?></td>
+                                <td><?php echo $a['tittle'] ?></td>
+                                <td><?php echo $a['lokasi'] ?> </td>
+                                <td><?php echo $a['harga'] ?></td>
+                                <td><?php echo $a['rating'] ?></td>
+                                <td>
+                                    <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
+                                        <button>Detail</button>
+                                    </a>
+                                    <a href="edit_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                        <button>Edit</button>
+                                    </a>
+                                    <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                        <button class="btn2">Delete</button>
+                                    </a>
+                                </td>
+                            </tr>
+                    <?php
                         }
                     }
                     ?>
@@ -100,11 +99,11 @@ include '../db/koneksi.php';
                 <?php
                 $no = 0;
                 $sql = "SELECT * from user";
-                $result=$db->query($sql);
-                if($result->num_rows>0){
-                    while($a=$result->fetch_assoc()){
-                        $no+=1
-                    ?>
+                $result = $db->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($a = $result->fetch_assoc()) {
+                        $no += 1
+                ?>
                         <tbody>
                             <tr>
                                 <td><?php echo $no  ?></td>
@@ -122,7 +121,7 @@ include '../db/koneksi.php';
                                 </td>
                             </tr>
                         </tbody>
-                    <?php    
+                <?php
                     }
                 }
                 ?>
@@ -144,7 +143,13 @@ include '../db/koneksi.php';
                         <td>agung@co.id</td>
                         <td>admin</td>
                     </tr>
-
+                    <tr>
+                        <td>2</td>
+                        <td>Agung</td>
+                        <td>hashing password</td>
+                        <td>agung@co.id</td>
+                        <td>admin</td>
+                    </tr>
                 </tbody>
             </table>
         </div>

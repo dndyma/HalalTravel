@@ -92,7 +92,7 @@
                     while ($a = $result->fetch_assoc()) { ?>
                         <div class="card">
                             <div class="box-card">
-                                <img src="../gambar_input/<?php echo $a['gambar'] ?>" alt="turkey" class="img-card">
+                                <img src="../uploads/?php echo $a['gambar'] ?>" alt="turkey" class="img-card">
                             </div>
                             <div class="card-desc">
                                 <h1><?php echo $a['title'] ?></h1>
