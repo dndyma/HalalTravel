@@ -11,6 +11,7 @@
         <input type="file" value='gambar' name='gambar'>
         <input type="text" placeholder='lokasi' name='lokasi'>
         <input type="text" placeholder='harga' name='harga'>
+        <input type="text" placeholder='rating' name='rating'>
         <input type="submit" value='simpan' name='simpan'>
     </form>
 </body>
