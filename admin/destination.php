@@ -26,7 +26,7 @@
 
     <div class="dashboard">
         <div class="dashboard-header">
-            <div class="dashboard-account">Dandy M</div>
+            <div class="dashboard-account"><?php session_start(); $_SESSION['username']?></div>
         </div>
         <h1>CREATE DESTINATION</h1>
         <div class="dashboard-main">
