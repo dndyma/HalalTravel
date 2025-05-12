@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="../feature/admin.php" method='POST' enctype='multipart/form-data'>
+        <input type="text" placeholder='tittle' name='tittle'>
+        <input type="file" value='gambar' name='gambar'>
+        <input type="text" placeholder='lokasi' name='lokasi'>
+        <input type="text" placeholder='harga' name='harga'>
+        <input type="submit" value='simpan' name='simpan'>
+    </form>
 </body>
 </html>
