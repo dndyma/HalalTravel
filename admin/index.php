@@ -104,7 +104,7 @@ include '../db/koneksi.php';
                             <tr>
                                 <td><?php echo $no  ?></td>
                                 <td><?php echo $a['username_user']  ?></td>
-                                <td><?php echo sh1($a['password_user'])  ?></td>
+                                <td><?php echo sha1($a['password_user'])  ?></td>
                                 <td><?php echo $a['email_user']  ?></td>
                                 <td><?php echo $a['role']  ?></td>
                                 <td>
