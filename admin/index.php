@@ -1,5 +1,6 @@
 <?php
 include '../db/koneksi.php';
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +40,7 @@ include '../db/koneksi.php';
                     Add destination
                 </button>
             </a>
-            <div class="dashboard-account">Dandy M</div>
+            <div class="dashboard-account"><?php echo $_SESSION['username'] ?></div>
 
         </div>
         <div class="dashboard-main">
@@ -134,23 +135,37 @@ include '../db/koneksi.php';
                     <th>Password</th>
                     <th>Email</th>
                     <th>Role</th>
+                    <th>Action</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Agung</td>
-                        <td>hashing password</td>
-                        <td>agung@co.id</td>
-                        <td>admin</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Agung</td>
-                        <td>hashing password</td>
-                        <td>agung@co.id</td>
-                        <td>admin</td>
-                    </tr>
-                </tbody>
+                <?php
+                $no = 0;
+                $sql = "SELECT * from admin";
+                $result = $db->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($a = $result->fetch_assoc()) {
+                        $no += 1
+                ?>
+                        <tbody>
+                            <tr>
+                                <td><?php echo $no  ?></td>
+                                <td><?php echo $a['username_admin']  ?></td>
+                                <td><?php echo sha1($a['password_admin'])  ?></td>
+                                <td><?php echo $a['email_admin']  ?></td>
+                                <td><?php echo $a['role']  ?></td>
+                                <td>
+                                    <a href="edit_admin.php?id_user='<?php echo $a['id_admin'] ?>'">
+                                        <button>Edit</button>
+                                    </a>
+                                    <a href="hapus_admin.php?id_user='<?php echo $a['id_admin'] ?>">
+                                        <button class="btn2">Delete</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                <?php
+                    }
+                }
+                ?>
             </table>
         </div>
     </div>
