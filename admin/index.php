@@ -1,3 +1,8 @@
+<?php
+include '../db/koneksi.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,30 +55,36 @@
                     <th>Action</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Turkey National Park</td>
-                        <td>Turkey,Istanbull</td>
-                        <td>$23.59</td>
-                        <td>5</td>
-                        <td>
-                            <button>Detail</button>
-                            <button>Edit</button>
-                            <button class="btn2">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Turkey National Park</td>
-                        <td>Turkey,Istanbull</td>
-                        <td>$23.59</td>
-                        <td>5</td>
-                        <td>
-                            <button>Detail</button>
-                            <button>Edit</button>
-                            <button class="btn2">Delete</button>
-                        </td>
-                    </tr>
+                    <?php
+                    $no = 0;
+                    $sql = "SELECT * FROM destinasi";
+                    $result=$db->query($sql);
+                    if($result->num_rows>0){
+                        while($a=$result->fetch_assoc()){
+                            $no+=1;
+                    ?>
+                        <tr>
+                            <td><?php echo $no ?></td>
+                            <td><?php echo $a['tittle'] ?></td>
+                            <td><?php echo $a['lokasi'] ?> </td>
+                            <td><?php echo $a['harga'] ?></td>
+                            <td><?php echo $a['rating'] ?></td>
+                            <td>
+                                <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
+                                    <button>Detail</button>
+                                </a>
+                                <a href="edit_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                    <button>Edit</button>
+                                </a>
+                                <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                    <button class="btn2" >Delete</button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php      
+                        }
+                    }
+                    ?>
                 </tbody>
             </table>
             <h1>USER LIST</h1>
@@ -86,20 +97,35 @@
                     <th>Role</th>
                     <th>action</th>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Agung</td>
-                        <td>hashing password</td>
-                        <td>agung@co.id</td>
-                        <td>user</td>
-                        <td>
-                            <button>Edit</button>
-                            <button class="btn2">Delete</button>
-                        </td>
-                    </tr>
-
-                </tbody>
+                <?php
+                $no = 0;
+                $sql = "SELECT * from user";
+                $result=$db->query($sql);
+                if($result->num_rows>0){
+                    while($a=$result->fetch_assoc()){
+                        $no+=1
+                    ?>
+                        <tbody>
+                            <tr>
+                                <td><?php echo $no  ?></td>
+                                <td><?php echo $a['username_user']  ?></td>
+                                <td><?php echo sha1($a['password_user'])  ?></td>
+                                <td><?php echo $a['email_user']  ?></td>
+                                <td><?php echo $a['role']  ?></td>
+                                <td>
+                                    <a href="edit_user.php?id_user='<?php echo $a['id_user'] ?>'">
+                                        <button>Edit</button>
+                                    </a>
+                                    <a href="hapus_user.php?id_user='<?php echo $a['id_user'] ?>">
+                                        <button class="btn2">Delete</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    <?php    
+                    }
+                }
+                ?>
             </table>
             <h1>ADMIN LIST</h1>
             <table border="0" cellspacing="0">
