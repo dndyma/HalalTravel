@@ -11,12 +11,17 @@
 
 <body>
     <div class="sidebar">
-        <li>
-            <h1>Halal<span>Travel</span></h1>
-        </li>
-        <li><button onclick="window.location.href='index.php'">Dashboard</button></li>
-        <li><button onclick="window.location.href='user.php'" class="active">User</button></li>
-        <li><button onclick="window.location.href='destination.php'">Destination</button></li>
+        <div>
+            <li>
+                <h1>Halal<span>Travel</span></h1>
+            </li>
+            <li><button onclick="window.location.href='index.php'">Dashboard</button></li>
+            <li><button onclick="window.location.href='user.php'" class="active">User</button></li>
+            <li><button onclick="window.location.href='destination.php'">Destination</button></li>
+        </div>
+        <div>
+            <img src="../assets/icons/test.svg" alt="">
+        </div>
     </div>
 
     <div class="dashboard">

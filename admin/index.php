@@ -11,12 +11,17 @@
 
 <body>
     <div class="sidebar">
-        <li>
-            <h1>Halal<span>Travel</span></h1>
-        </li>
-        <li><button onclick="window.location.href='index.php'" class="active">Dashboard</button></li>
-        <li><button onclick="window.location.href='user.php'">User</button></li>
-        <li><button onclick="window.location.href='destination.php';">Destination</button></li>
+        <div>
+            <li>
+                <h1>Halal<span>Travel</span></h1>
+            </li>
+            <li><button onclick="window.location.href='index.php'" class="active">Dashboard</button></li>
+            <li><button onclick="window.location.href='user.php'">User</button></li>
+            <li><button onclick="window.location.href='destination.php';">Destination</button></li>
+        </div>
+        <div>
+            <img src="../assets/icons/test.svg" alt="">
+        </div>
     </div>
 
     <div class="dashboard">
@@ -92,6 +97,26 @@
                             <button>Edit</button>
                             <button class="btn2">Delete</button>
                         </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <h1>ADMIN LIST</h1>
+            <table border="0" cellspacing="0">
+                <thead>
+                    <th>No</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Agung</td>
+                        <td>hashing password</td>
+                        <td>agung@co.id</td>
+                        <td>admin</td>
                     </tr>
 
                 </tbody>

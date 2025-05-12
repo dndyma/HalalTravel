@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -19,16 +20,16 @@
         <nav>
             <ul>
                 <li>
-                    <a href="" id="active">Home</a>
+                    <a href="" class="nav active">Home</a>
                 </li>
                 <li>
-                    <a href="#destination">Destinations</a>
+                    <a href="#destination" class="nav">Destinations</a>
                 </li>
                 <!-- <li>
                     <a href="">Halal</a>
                 </li> -->
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about" class="nav">About</a>
                 </li>
             </ul>
         </nav>
@@ -51,7 +52,7 @@
         <?php
         } else {
         ?>
-            <div class="btn-login">
+            <div class="btn-login2">
                 <form action="../feature/logout.php" method='POST'>
                     <input type="submit" value="Logout" name='logout' class="logout">
                 </form>
@@ -83,36 +84,36 @@
                 <h1 id="destination"><span>Explore</span> Your Destinations.</h1>
             </div>
             <div class="card-container">
-                <?php 
+                <?php
                 include '../db/koneksi.php';
                 $sql = "SELECT * from destinasi";
                 $result = $db->query($sql);
-                if($result->num_rows>0){
-                    while($a=$result->fetch_assoc()){?>   
-                     <div class="card">
-                    <div class="box-card">
-                        <img src="../gambar_input/<?php echo $a['gambar'] ?>" alt="turkey" class="img-card">
-                    </div>
-                    <div class="card-desc">
-                        <h1>Turkey National Park</h1>
-                        <div class="desc">
-                            <div class="star">
-                                <img src="../assets/icons/star.svg" alt="">
-                                <h4><?php echo $a['rating'] ?></h4>
+                if ($result->num_rows > 0) {
+                    while ($a = $result->fetch_assoc()) { ?>
+                        <div class="card">
+                            <div class="box-card">
+                                <img src="../gambar_input/<?php echo $a['gambar'] ?>" alt="turkey" class="img-card">
                             </div>
-                            <div class="location">
-                                <img src="../assets/icons/location.svg" alt="">
-                                <h4><?php echo $a['lokasi'] ?></h4>
+                            <div class="card-desc">
+                                <h1><?php echo $a['title'] ?></h1>
+                                <div class="desc">
+                                    <div class="star">
+                                        <img src="../assets/icons/star.svg" alt="">
+                                        <h4><?php echo $a['rating'] ?></h4>
+                                    </div>
+                                    <div class="location">
+                                        <img src="../assets/icons/location.svg" alt="">
+                                        <h4><?php echo $a['lokasi'] ?></h4>
+                                    </div>
+                                </div>
+                                <div class="footer-desc">
+                                    <div class="price">
+                                        <h3><?php echo $a['harga'] ?></h3>
+                                    </div>
+                                    <a href="detail.php"><button>View Detail</button></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="footer-desc">
-                            <div class="price">
-                                <h3><?php echo $a['harga'] ?></h3>
-                            </div>
-                            <a href="detail.php"><button>View Detail</button></a>
-                        </div>
-                    </div>
-                </div>   
                 <?php
                     }
                 }
@@ -142,8 +143,9 @@
             </div>
         </div>
     </footer>
+    <script src="../assets/js/index.js">
+    </script>
 
-    <script src="../assets/js/index.js"></script>
 </body>
 
 </html>

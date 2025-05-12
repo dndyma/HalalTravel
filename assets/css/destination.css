@@ -47,9 +47,10 @@ li button:hover {
   height: auto;
   padding: 20px;
   width: 300px;
-  background-color: var(--ijau);
+  background-color: #142360;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -93,7 +94,7 @@ li button:hover {
   border-radius: 8px;
 }
 .dashboard h1 {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bold;
   padding: 20px 0px;
 }
