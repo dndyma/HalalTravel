@@ -9,12 +9,13 @@ $harga =$_POST['harga'];
 $lokasi = $_POST['lokasi'];
 $id = uniqid();
 $rating = $_POST['rating'];
-if(!is_numeric($harga)){
+if(!is_numeric($harga) || empty($tittle) || empty($gambar) || empty($harga) || empty($lokasi)){
     $destinasi_in='input harga harus berupa angka';
     header('location: ../pages/admin.php');
 }
 else{
     $sql = "INSERT into  destinasi values('$id','$tittle','$gambar','$lokasi','$harga','$rating')";
     $db->query($sql);
+    header('location:../admin/destination.php');
 }
 ?>

@@ -32,7 +32,6 @@
         <div class="dashboard-main">
 
             <form action="../feature/admin.php" method="POST" enctype="multipart/form-data">
-
                 <label for="title">Destination Title</label>
                 <input type="text" placeholder='tittle' name='tittle'>
                 <label for="harga">Price</label>
@@ -40,7 +39,7 @@
                 <label for="desc">Description</label>
                 <input type="text" placeholder='Desc' name='desc'>
                 <label for="ratings">Ratings</label>
-                <input type="number" placeholder='ratings' name='ratings'>
+                <input type="number" placeholder='ratings' name='rating'>
                 <div>
                     <label for="Picture">Picture</label>
                     <input type="file" value='gambar' name='gambar'>
