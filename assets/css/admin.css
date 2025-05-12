@@ -1,0 +1,132 @@
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  color: var(--hytam);
+}
+a,
+li {
+  color: white;
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li h1 span {
+  color: var(--oren);
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in 0.5s;
+}
+
+li button {
+  border: none;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  opacity: 50%;
+}
+
+/* Sidebar */
+.sidebar .active {
+  opacity: 100%;
+}
+
+li button:hover {
+  opacity: 80%;
+}
+.sidebar {
+  height: 100vh;
+  padding: 20px;
+  width: 300px;
+  background-color: var(--ijau);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Daashboard */
+
+.dashboard {
+  width: 100%;
+  padding: 10px 30px;
+}
+
+.dashboard .dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  gap: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(218, 218, 218, 0.616);
+}
+
+.dashboard .dashboard-header button {
+  padding: 10px 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--hytam);
+  color: white;
+  font-weight: bold;
+}
+
+.dashboard .dashboard-header button:hover {
+  opacity: 96%;
+}
+
+.dashboard .dashboard-main h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.dashboard .dashboard-main table {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  text-align: center;
+}
+.dashboard .dashboard-main table th {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: var(--oren);
+}
+
+.dashboard .dashboard-main table td {
+  font-weight: 200;
+  padding: 10px;
+}
+
+.dashboard .dashboard-main table tr {
+  cursor: pointer;
+  transition: ease-in 0.1s;
+}
+
+.dashboard .dashboard-main table tr:hover {
+  background-color: antiquewhite;
+}
+
+.dashboard .dashboard-main table td button {
+  padding: 10px;
+  background-color: var(--hytam);
+  color: white;
+  font-weight: bold;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.dashboard .dashboard-main table td .btn2 {
+  background-color: red;
+  border: 1px solid rgb(184, 0, 0);
+}

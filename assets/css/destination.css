@@ -1,0 +1,146 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--hytam);
+}
+a,
+li {
+  color: white;
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li {
+  cursor: pointer;
+  padding: 10px;
+  transition: ease-in 0.5s;
+}
+
+li button {
+  border: none;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  opacity: 50%;
+}
+
+/* Sidebar */
+.sidebar .active {
+  opacity: 100%;
+}
+
+li h1 span {
+  color: var(--oren);
+}
+li button:hover {
+  opacity: 80%;
+}
+.sidebar {
+  height: auto;
+  padding: 20px;
+  width: 300px;
+  background-color: var(--ijau);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Daashboard */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px 30px;
+}
+
+.dashboard .dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  gap: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(218, 218, 218, 0.616);
+}
+
+.dashboard .dashboard-header button {
+  padding: 10px 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--hytam);
+  color: white;
+  font-weight: bold;
+}
+
+.dashboard .dashboard-header button:hover {
+  opacity: 96%;
+}
+
+.dashboard .dashboard-main {
+  border: 1px solid rgba(221, 221, 221, 0.651);
+  height: 80%;
+  border-radius: 8px;
+}
+.dashboard h1 {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.dashboard .dashboard-main form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.dashboard .dashboard-main form label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dashboard .dashboard-main form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--bdwhite);
+  padding: 10px;
+  margin: 30px;
+  outline: none;
+}
+
+.dashboard .dashboard-main form input:focus {
+  border-bottom: 1px solid var(--oren);
+}
+.dashboard .dashboard-main form div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard .dashboard-main form div button {
+  background-color: var(--hytam);
+  color: white;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.dashboard .dashboard-main form div button:hover {
+  opacity: 90%;
+}

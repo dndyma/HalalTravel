@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +23,7 @@
                     <a href="index.php" id="active">Back</a>
                 </li>
                 <li>
-                    <a href="#destination">Destinations</a>
+                    <a href="#destination">Detail</a>
                 </li>
                 <!-- <li>
                     <a href="">Halal</a>

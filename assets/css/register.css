@@ -1,77 +1,77 @@
- body {
-    background-color: var(--tung);
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
+body {
+  background-color: var(--tung);
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-input,button {
-    border-radius: 5px;
-    border: 1px solid #E8E3FB;
-    padding:10px;
+input,
+button {
+  border-radius: 5px;
+  border: 1px solid #e8e3fb;
+  padding: 10px;
 }
 
 button {
-    cursor: pointer;
-    width: 100%;
-    color:white;
-    font-size: large;
-    font-weight: bold;
-    background-color: var(--ijau);
-} 
+  cursor: pointer;
+  width: 100%;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  background-color: var(--ijau);
+}
 input {
-    outline: none;
+  outline: none;
 }
 input:focus {
-    border:1px solid var(--ijau);
+  border: 1px solid var(--ijau);
 }
 
-
 .container {
-    box-shadow: 1px 1px 20px  rgb(113, 146, 121);
-    border-radius: 10px;
-    width: 40%;
-    height: 90%;
-    background-color: white;
-    padding:20px;
+  box-shadow: 1px 1px 20px rgb(113, 146, 121);
+  border-radius: 10px;
+  width: 40%;
+  height: 95%;
+  background-color: white;
+  padding: 20px;
 }
 
 .container form {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .container form .inputnya {
-    display: flex;
-    flex-direction: column;
-    gap:15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .container form .btn {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container form .btn div {
-    color: #333333;
-    margin-top: 5px;
-    font-size: small;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  color: #333333;
+  margin-top: 5px;
+  font-size: small;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .container form .img-icons {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .container form .img-icons img {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
