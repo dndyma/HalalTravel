@@ -3,7 +3,6 @@ include '../db/koneksi.php';
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +40,7 @@ session_start();
                     Add destination
                 </button>
             </a>
-            <div class="dashboard-account"><?php echo $_SESSION['username']?></div>
+            <div class="dashboard-account"><?php echo $_SESSION['username'] ?></div>
 
         </div>
         <div class="dashboard-main">
@@ -59,30 +58,30 @@ session_start();
                     <?php
                     $no = 0;
                     $sql = "SELECT * FROM destinasi";
-                    $result=$db->query($sql);
-                    if($result->num_rows>0){
-                        while($a=$result->fetch_assoc()){
-                            $no+=1;
+                    $result = $db->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($a = $result->fetch_assoc()) {
+                            $no += 1;
                     ?>
-                        <tr>
-                            <td><?php echo $no ?></td>
-                            <td><?php echo $a['tittle'] ?></td>
-                            <td><?php echo $a['lokasi'] ?> </td>
-                            <td><?php echo $a['harga'] ?></td>
-                            <td><?php echo $a['rating'] ?></td>
-                            <td>
-                                <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
-                                    <button>Detail</button>
-                                </a>
-                                <a href="edit_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
-                                    <button>Edit</button>
-                                </a>
-                                <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
-                                    <button class="btn2" >Delete</button>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php      
+                            <tr>
+                                <td><?php echo $no ?></td>
+                                <td><?php echo $a['tittle'] ?></td>
+                                <td><?php echo $a['lokasi'] ?> </td>
+                                <td><?php echo $a['harga'] ?></td>
+                                <td><?php echo $a['rating'] ?></td>
+                                <td>
+                                    <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
+                                        <button>Detail</button>
+                                    </a>
+                                    <a href="edit_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                        <button>Edit</button>
+                                    </a>
+                                    <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                        <button class="btn2">Delete</button>
+                                    </a>
+                                </td>
+                            </tr>
+                    <?php
                         }
                     }
                     ?>
@@ -101,11 +100,11 @@ session_start();
                 <?php
                 $no = 0;
                 $sql = "SELECT * from user";
-                $result=$db->query($sql);
-                if($result->num_rows>0){
-                    while($a=$result->fetch_assoc()){
-                        $no+=1
-                    ?>
+                $result = $db->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($a = $result->fetch_assoc()) {
+                        $no += 1
+                ?>
                         <tbody>
                             <tr>
                                 <td><?php echo $no  ?></td>
@@ -123,7 +122,7 @@ session_start();
                                 </td>
                             </tr>
                         </tbody>
-                    <?php    
+                <?php
                     }
                 }
                 ?>
@@ -141,11 +140,11 @@ session_start();
                 <?php
                 $no = 0;
                 $sql = "SELECT * from admin";
-                $result=$db->query($sql);
-                if($result->num_rows>0){
-                    while($a=$result->fetch_assoc()){
-                        $no+=1
-                    ?>
+                $result = $db->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($a = $result->fetch_assoc()) {
+                        $no += 1
+                ?>
                         <tbody>
                             <tr>
                                 <td><?php echo $no  ?></td>
@@ -163,7 +162,7 @@ session_start();
                                 </td>
                             </tr>
                         </tbody>
-                    <?php    
+                <?php
                     }
                 }
                 ?>
