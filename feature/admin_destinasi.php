@@ -16,5 +16,5 @@ if(!is_numeric($harga) || empty($tittle) || empty($gambar) || empty($harga) || e
 } else {
     $sql = "INSERT into  destinasi values('$id','$tittle','$gambar','$lokasi','$harga','$rating','$deskripsi')";
     $db->query($sql);
-    header('location:../admin/destination.php');
+    header('location:../admin/index.php');
 }
