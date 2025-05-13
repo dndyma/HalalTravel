@@ -4,13 +4,13 @@ include '../db/koneksi.php';
 if (isset($_POST['cari'])) {
     $judul = $_POST['pencarian'];
     $sql = "SELECT * FROM destinasi where tittle='$judul'";
-    $result=$db->query($sql);
-    if($result->num_rows>0){
+    $result = $db->query($sql);
+    if ($result->num_rows > 0) {
         $_SESSION['tittle'] = $judul;
-        while($a=$result->fetch_assoc()){
+        while ($a = $result->fetch_assoc()) {
             header('location:pencarian.php');
         }
-    }else{
+    } else {
         header('location:pencarian.php');
         echo 'lokasi tidak ditemukan';
     }
@@ -90,10 +90,11 @@ if (isset($_POST['cari'])) {
                     <div class="search">
                         <form action="index.php">
                             <input type="text" placeholder="Discover your dream destination with a touch of halal elegance.." name='pencarian'>
+                            <button type='submit' name='cari'>
+                                <img src="../assets/icons/search.svg" alt="search" class="icon-search">
+                            </button>
                         </form>
-                        <button type='submit' name='cari'>
-                            <img src="../assets/icons/search.svg" alt="search" class="icon-search">
-                        </button>
+
                     </div>
                 </div>
             </div>
@@ -105,8 +106,13 @@ if (isset($_POST['cari'])) {
             </div>
             <div class="card-container">
                 <?php
-                include '../db/koneksi.php';
-                $sql = "SELECT * from destinasi";
+                $keyword = '';
+                if (isset($_GET['cari']) && !empty($_GET['pencarian'])) {
+                    $keyword = trim($_GET['pencarian']);
+                    $sql = "SELECT * FROM destinasi WHERE tittle LIKE '%$keyword%'";
+                } else {
+                    $sql = "SELECT * FROM destinasi";
+                }
                 $result = $db->query($sql);
                 if ($result->num_rows > 0) {
                     while ($a = $result->fetch_assoc()) { ?>
