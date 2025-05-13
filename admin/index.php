@@ -99,7 +99,6 @@ session_start();
                     <th>Username</th>
                     <th>Password</th>
                     <th>Email</th>
-                    <th>Role</th>
                     <th>action</th>
                 </thead>
                 <?php
