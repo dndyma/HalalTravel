@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../db/koneksi.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +76,7 @@ include '../db/koneksi.php';
                     <div class="search">
                         <form action="index.php">
                             <input type="text" placeholder="Discover your dream destination with a touch of halal elegance.." name='pencarian'>
-                            <button type='submit' name='cari'>
+                            <button type='submit'>
                                 <img src="../assets/icons/search.svg" alt="search" class="icon-search">
                             </button>
                         </form>
@@ -92,7 +93,7 @@ include '../db/koneksi.php';
             <div class="card-container">
                 <?php
                 $keyword = '';
-                if (isset($_GET['cari']) && !empty($_GET['pencarian'])) {
+                if (!empty($_GET['pencarian'])) {
                     $keyword = trim($_GET['pencarian']);
                     $sql = "SELECT * FROM destinasi WHERE tittle LIKE '%$keyword%'";
                 } else {
@@ -127,6 +128,8 @@ include '../db/koneksi.php';
                         </div>
                 <?php
                     }
+                } else {
+                    echo "<h1>Data tidak ditemukan</h1>";
                 }
                 ?>
 
