@@ -2,12 +2,13 @@
 include '../db/koneksi.php';
 $id = $_GET['id_destinasi'];
 $sql = "SELECT * from destinasi where id_destinasi='$id'";
-$result= $db->query($sql);
+$result = $db->query($sql);
 $a = $result->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,10 +80,10 @@ $a = $result->fetch_assoc();
         <section class="destination">
             <div class="container-destination">
                 <div class="detail-destination">
-                    <h1 id="destination"><?php echo $a['lokasi'] ?></h1>
+                    <h1 id="destination"><?php echo $a['tittle'] ?></h1>
                     <div class="">
                         <img src="../assets/icons/location2.svg" alt="">
-                        <p>Turkey , Istanbull</p>
+                        <p><?php echo $a['lokasi'] ?></p>
                     </div>
                 </div>
                 <div class="blob-destination">
