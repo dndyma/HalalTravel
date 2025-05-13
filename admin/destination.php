@@ -39,18 +39,18 @@
 
             <form action="../feature/admin_destinasi.php" method="POST" enctype="multipart/form-data">
                 <label for="title">Destination Title</label>
-                <input type="text" placeholder='tittle' name='tittle'>
+                <input type="text" placeholder='tittle' name='tittle' required>
                 <label for="harga">Price</label>
-                <input type="text" placeholder='harga' name='harga'>
+                <input type="text" placeholder='harga' name='harga' required>
                 <label for="desc">Description</label>
-                <input type="text" placeholder='Desc' name='deskripsi'>
+                <input type="text" placeholder='Desc' name='deskripsi' required>
                 <label for="ratings">Ratings</label>
-                <input type="number" placeholder='ratings' name='rating'>
+                <input type="number" placeholder='ratings' name='rating' required>
                 <div>
                     <label for="Picture">Picture</label>
-                    <input type="file" value='gambar' name='gambar'>
+                    <input type="file" value='gambar' name='gambar' required>
                     <label for="lokasi">Location</label>
-                    <input type="text" placeholder='lokasi' name='lokasi'>
+                    <input type="text" placeholder='lokasi' name='lokasi' required>
 
                     <button type="submit" value='simpan' name='simpan'>Save</button>
                 </div>

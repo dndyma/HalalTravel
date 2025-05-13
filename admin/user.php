@@ -16,7 +16,7 @@
                 <h1>Halal<span>Travel</span></h1>
             </li>
             <li><button onclick="window.location.href='index.php'">Dashboard</button></li>
-            <li><button onclick="window.location.href='user.php'" class="active">User</button></li>
+            <li><button onclick="window.location.href='admin.php'" class="active">User</button></li>
             <li><button onclick="window.location.href='destination.php'">Destination</button></li>
         </div>
         <div>
@@ -26,13 +26,13 @@
 
     <div class="dashboard">
         <div class="dashboard-header">
-            <div class="dashboard-account"><?php 
-            session_start(); 
-            if(empty($_SESSION['username'])){
-                echo "null";
-            }else{
-                $_SESSION['username'];
-            } ?></div>
+            <div class="dashboard-account"><?php
+                                            session_start();
+                                            if (empty($_SESSION['username'])) {
+                                                echo "null";
+                                            } else {
+                                                $_SESSION['username'];
+                                            } ?></div>
         </div>
         <h1>EDIT USER</h1>
         <div class="dashboard-main">

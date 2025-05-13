@@ -40,11 +40,11 @@
             <form action="../feature/admin_admin.php" method="POST" enctype="multipart/form-data">
 
                 <label for="Username">Username</label>
-                <input type="text" placeholder='Username' name='username'>
+                <input type="text" placeholder='Username' name='username' required>
                 <label for="email">Email</label>
-                <input type="email" placeholder='email' name='email'>
+                <input type="email" placeholder='email' name='email' required>
                 <label for="password">Password</label>
-                <input type="password" placeholder='password' name='password'>
+                <input type="password" placeholder='password' name='password' required>
                 <label for="role">Role</label>
                 <input type="text" placeholder='' name='role' value="admin" disabled style="font-size: medium;color:black;">
                 <div>
