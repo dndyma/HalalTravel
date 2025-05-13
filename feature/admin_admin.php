@@ -1,6 +1,6 @@
 <?php
 include '../db/koneksi.php';
-$user_in = '';
+$admin_in = '';
 $id = uniqid();
 $username = $_POST['username'];
 $email = $_POST['email'];
@@ -10,7 +10,15 @@ if(empty($username) || empty($email) || empty($password) || empty($role)){
     $user_in='input harga harus benar';
     header('location: ../admin/user.php');
 } else {
-    $sql = "INSERT into  admin values('$id','$username','$password','$email','$role')";
-    $db->query($sql);
-    header('location:../admin/user.php');
+    $sql = "SELECT email_admin FROM admin where email_admin='$email'";
+        $result = $db->query($sql);
+        if($result->num_rows>0){
+            $admin_in='email telah digunakan';
+            header('location:../admin/admin.php');
+        }
+        else{
+            $sql = "INSERT into  admin values('$id','$username','$password','$email','$role')";
+            $db->query($sql);
+            header('location:../admin/user.php');
+        }
 }

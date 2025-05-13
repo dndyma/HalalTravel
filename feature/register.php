@@ -13,12 +13,18 @@ if (isset($_POST['register'])) {
         header('location:../pages/register.php');
     }
     else{
-        $sql = "SELECT id_user FROM user";
+        $sql = "SELECT email_user FROM user where email_user='$email'";
         $result = $db->query($sql);
-        $sql = "INSERT into user values('$id_user','$username','$password','$email','$role')";
-        $result = $db->query($sql);
-        $_SESSION['username'] = $username;
-        header('location:../pages/index.php');
+        if($result->num_rows>0){
+            $register_in='email telah digunakan';
+            header('location:../pages/register.php');
+        }
+        else{
+            $sql = "INSERT into user values('$id_user','$username','$password','$email','$role')";
+            $result = $db->query($sql);
+            $_SESSION['username'] = $username;
+            header('location:../pages/index.php');
+        }
     }
 }
 ?>
