@@ -54,7 +54,6 @@ if (isset($_POST['cari'])) {
             </ul>
         </nav>
         <?php
-        session_start();
         if (empty($_SESSION['username'])) {
         ?>
             <div class="btn-login">
