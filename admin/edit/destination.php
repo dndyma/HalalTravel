@@ -15,9 +15,9 @@
             <li>
                 <h1>Halal<span>Travel</span></h1>
             </li>
-            <li><button onclick="window.location.href='user.php'">User</button></li>
-            <li><button onclick="window.location.href='admin.php'">Admin</button></li>
             <li><button onclick="window.location.href='destination.php'" class="active">Destination</button></li>
+            <li><button onclick="window.location.href='../index.php'">Back</button></li>
+
         </div>
         <div>
             <img src="../assets/icons/test.svg" alt="">
