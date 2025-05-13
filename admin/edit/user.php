@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../assets/css/root.css">
-    <link rel="stylesheet" href="../assets/css/destination.css">
+    <link rel="stylesheet" href="../../assets/css/root.css">
+    <link rel="stylesheet" href="../../assets/css/destination.css">
 </head>
 
 <body>
@@ -15,9 +15,8 @@
             <li>
                 <h1>Halal<span>Travel</span></h1>
             </li>
-            <li><button onclick="window.location.href='index.php'">Dashboard</button></li>
             <li><button onclick="window.location.href='user.php'" class="active">User</button></li>
-            <li><button onclick="window.location.href='destination.php'">Destination</button></li>
+            <li><button onclick="window.location.href='../index.php'">Back</button></li>
         </div>
         <div>
             <img src="../assets/icons/test.svg" alt="">
@@ -26,13 +25,13 @@
 
     <div class="dashboard">
         <div class="dashboard-header">
-            <div class="dashboard-account"><?php 
-            session_start(); 
-            if(empty($_SESSION['username'])){
-                echo "null";
-            }else{
-                $_SESSION['username'];
-            } ?></div>
+            <div class="dashboard-account"><?php
+                                            session_start();
+                                            if (empty($_SESSION['username'])) {
+                                                echo "null";
+                                            } else {
+                                                $_SESSION['username'];
+                                            } ?></div>
         </div>
         <h1>EDIT USER</h1>
         <div class="dashboard-main">

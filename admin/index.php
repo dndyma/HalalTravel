@@ -75,10 +75,10 @@ session_start();
                                 <td><?php echo $a['harga'] ?></td>
                                 <td><?php echo $a['rating'] ?></td>
                                 <td>
-                                    <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
+                                    <a href="../pages/detail.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
                                         <button>Detail</button>
                                     </a>
-                                    <a href="edit_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                    <a href="edit/destination.php?id=<?php echo $a['id_destinasi'] ?>">
                                         <button>Edit</button>
                                     </a>
                                     <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
@@ -99,7 +99,6 @@ session_start();
                     <th>Username</th>
                     <th>Password</th>
                     <th>Email</th>
-                    <th>Role</th>
                     <th>action</th>
                 </thead>
                 <?php
@@ -116,9 +115,8 @@ session_start();
                                 <td><?php echo $a['username_user']  ?></td>
                                 <td><?php echo sha1($a['password_user'])  ?></td>
                                 <td><?php echo $a['email_user']  ?></td>
-                                <td><?php echo $a['role']  ?></td>
                                 <td>
-                                    <a href="edit_user.php?id_user='<?php echo $a['id_user'] ?>'">
+                                    <a href="edit/user.php?id='<?php echo $a['id_user'] ?>'">
                                         <button>Edit</button>
                                     </a>
                                     <a href="hapus_user.php?id_user='<?php echo $a['id_user'] ?>">
@@ -139,7 +137,6 @@ session_start();
                     <th>Username</th>
                     <th>Password</th>
                     <th>Email</th>
-                    <th>Role</th>
                     <th>Action</th>
                 </thead>
                 <?php
@@ -156,9 +153,8 @@ session_start();
                                 <td><?php echo $a['username_admin']  ?></td>
                                 <td><?php echo sha1($a['password_admin'])  ?></td>
                                 <td><?php echo $a['email_admin']  ?></td>
-                                <td><?php echo $a['role']  ?></td>
                                 <td>
-                                    <a href="edit_admin.php?id_user='<?php echo $a['id_admin'] ?>'">
+                                    <a href="edit/admin.php?id='<?php echo $a['id_admin'] ?>'">
                                         <button>Edit</button>
                                     </a>
                                     <a href="hapus_admin.php?id_user='<?php echo $a['id_admin'] ?>">

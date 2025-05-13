@@ -1,14 +1,14 @@
 <?php
 include '../db/koneksi.php';
-if(isset($_POST['cari'])){
+if (isset($_POST['cari'])) {
     $sql = "SELECT * FROM destinasi";
-
 }
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,7 +116,7 @@ if(isset($_POST['cari'])){
                                 </div>
                                 <div class="footer-desc">
                                     <div class="price">
-                                        <h3><?php echo $a['harga'] ?></h3>
+                                        <h3>Rp <?php echo number_format($a['harga'], 0, ',', '.'); ?></h3>
                                     </div>
                                     <a href="detail.php?id_destinasi=<?php echo $a['id_destinasi'] ?>"><button>View Detail</button></a>
                                 </div>

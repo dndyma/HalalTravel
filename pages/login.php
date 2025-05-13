@@ -19,7 +19,14 @@
                 <label for="username">Username</label>
                 <input type="text" placeholder="Username" name='username' maxlength="30">
                 <label for="password">Password</label>
-                <input type="password" placeholder="Password" name='password' minlength="8" maxlength="15">
+                <input type="password" placeholder="Password" name='password' minlength="5" maxlength="15">
+                <div>
+                    <label for="role">Role</label>
+                    <input type="radio" value="user" name="role">
+                    <label for="user">User</label><br>
+                    <input type="radio" value="admin" name="role">
+                    <label for="admin">Admin</label><br>
+                </div>
             </div>
             <div class="btn">
                 <button type="submit" value="Login" name='login'>Login</button>
@@ -27,7 +34,8 @@
                     <p>Don't have an account? <a href="register.php">Sign Up</a></p>
                     <p>Forgot password</p>
                 </div>
-                <p><?php include '../feature/login.php'; echo $login_in ?></p>
+                <p><?php include '../feature/login.php';
+                    echo $login_in ?></p>
             </div>
         </form>
     </div>
