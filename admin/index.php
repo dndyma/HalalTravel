@@ -115,7 +115,6 @@ session_start();
                                 <td><?php echo $a['username_user']  ?></td>
                                 <td><?php echo sha1($a['password_user'])  ?></td>
                                 <td><?php echo $a['email_user']  ?></td>
-                                <td><?php echo $a['role']  ?></td>
                                 <td>
                                     <a href="edit_user.php?id_user='<?php echo $a['id_user'] ?>'">
                                         <button>Edit</button>
