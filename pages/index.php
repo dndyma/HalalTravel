@@ -1,7 +1,19 @@
 <?php
+session_start();
 include '../db/koneksi.php';
 if (isset($_POST['cari'])) {
-    $sql = "SELECT * FROM destinasi";
+    $judul = $_POST['pencarian'];
+    $sql = "SELECT * FROM destinasi where tittle='$judul'";
+    $result=$db->query($sql);
+    if($result->num_rows>0){
+        $_SESSION['tittle'] = $judul;
+        while($a=$result->fetch_assoc()){
+            header('location:pencarian.php');
+        }
+    }else{
+        header('location:pencarian.php');
+        echo 'lokasi tidak ditemukan';
+    }
 }
 
 ?>

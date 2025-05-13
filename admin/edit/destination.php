@@ -1,3 +1,23 @@
+<?php
+include '../../db/koneksi.php';
+$id=$_GET['id'];
+if(isset($_POST['simpan'])){
+
+    $id = $_POST['id'];
+    $judul = $_POST['tittle'];
+    $harga = $_POST['harga'];
+    $rating = $_POST['rating'];
+    $gambar = $_FILES['gambar']['name'];
+    $tmp = $_FILES['gambar']['tmp_name'];
+    $deskripsi = $_POST['deskripsi'];
+    $lokasi = $_POST['lokasi'];
+    move_uploaded_file($tmp,'../../uploads/' .$gambar);
+    $sql = "UPDATE destinasi set tittle='$judul',gambar='$gambar',lokasi='$lokasi',harga='$harga',rating='$rating',deskripsi='$deskripsi' where id_destinasi='$id'";
+    $db->query($sql);
+    header('location:../index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,21 +56,27 @@
         </div>
         <h1>EDIT DESTINATION</h1>
         <div class="dashboard-main">
-
-            <form action="../feature/admin_destinasi.php" method="POST" enctype="multipart/form-data">
+<?php
+$sql = "SELECT * from destinasi where id_destinasi= '$id'";
+$result=$db->query($sql);
+$a=$result->fetch_assoc();
+?>
+            <form action="destination.php" method="POST" enctype="multipart/form-data">
+                <label for="title">Destination id</label>
+                <input type="text" placeholder='tittle' name='id' required value='<?php echo $a['id_destinasi'] ?>' >
                 <label for="title">Destination Title</label>
-                <input type="text" placeholder='tittle' name='tittle' required>
+                <input type="text" placeholder='tittle' name='tittle' required value='<?php echo $a['tittle'] ?>'>
                 <label for="harga">Price</label>
-                <input type="text" placeholder='harga' name='harga' required>
+                <input type="text" placeholder='harga' name='harga' required value='<?php echo $a['harga'] ?>'>
                 <label for="desc">Description</label>
-                <input type="text" placeholder='Desc' name='deskripsi' required>
+                <input type="text" placeholder='Desc' name='deskripsi' required value='<?php echo $a['deskripsi'] ?>'>
                 <label for="ratings">Ratings</label>
-                <input type="number" placeholder='ratings' name='rating' required>
+                <input type="number" placeholder='ratings' name='rating' required value='<?php echo $a['rating'] ?>'>
                 <div>
                     <label for="Picture">Picture</label>
                     <input type="file" value='gambar' name='gambar' required>
                     <label for="lokasi">Location</label>
-                    <input type="text" placeholder='lokasi' name='lokasi' required>
+                    <input type="text" placeholder='lokasi' name='lokasi' required value='<?php echo $a['lokasi'] ?>'>
 
                     <button type="submit" value='simpan' name='simpan'>Save</button>
                 </div>

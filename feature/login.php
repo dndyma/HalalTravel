@@ -9,7 +9,7 @@ if (isset($_POST['login'])) {
     if (empty($username) || empty($password)) {
         $login_in = 'harap data di isi dengan lengkap';
     } else {
-        if($role=='admin'){
+        if($role=='user'){
             $sql1 = "SELECT * from user where username_user='$username' and password_user = '$password' ";
             $result1 = $db->query($sql1);
             if ($result1->num_rows > 0) {
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
                 header('location:../pages/login.php'); 
             }
         }
-        elseif($role=='user'){
+        elseif($role=='admin'){
             $sql2 = "SELECT * from admin where username_admin='$username' and password_admin = '$password' ";
             $result2 = $db->query($sql2);
             if($result2->num_rows>0){

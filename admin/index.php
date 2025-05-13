@@ -81,7 +81,7 @@ session_start();
                                     <a href="edit/destination.php?id=<?php echo $a['id_destinasi'] ?>">
                                         <button>Edit</button>
                                     </a>
-                                    <a href="hapus_detinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
+                                    <a href="edit/hapus_destinasi.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
                                         <button class="btn2">Delete</button>
                                     </a>
                                 </td>
