@@ -27,8 +27,8 @@
                     <p>Don't have an account? <a href="register.php">Sign Up</a></p>
                     <p>Forgot password</p>
                 </div>
+                <p><?php include '../feature/login.php'; echo $login_in ?></p>
             </div>
-            <p><?php include '../feature/login.php'; echo $login_in ?></p>
         </form>
     </div>
 </body>

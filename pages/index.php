@@ -1,6 +1,14 @@
+<?php
+include '../db/koneksi.php';
+if(isset($_POST['cari'])){
+    $sql = "SELECT * FROM destinasi";
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,10 +76,10 @@
                 <img src="../assets/img/tajmahal.jpg" alt="" class="img-home">
                 <div class="box-search">
                     <div class="search">
-                        <form action="">
-                            <input type="text" placeholder="Discover your dream destination with a touch of halal elegance..">
+                        <form action="index.php">
+                            <input type="text" placeholder="Discover your dream destination with a touch of halal elegance.." name='pencarian'>
                         </form>
-                        <button>
+                        <button type='submit' name='cari'>
                             <img src="../assets/icons/search.svg" alt="search" class="icon-search">
                         </button>
                     </div>
@@ -92,10 +100,10 @@
                     while ($a = $result->fetch_assoc()) { ?>
                         <div class="card">
                             <div class="box-card">
-                                <img src="../uploads/?php echo $a['gambar'] ?>" alt="turkey" class="img-card">
+                                <img src="../uploads/<?php echo $a['gambar'] ?>" alt="turkey" class="img-card">
                             </div>
                             <div class="card-desc">
-                                <h1><?php echo $a['title'] ?></h1>
+                                <h1><?php echo $a['tittle'] ?></h1>
                                 <div class="desc">
                                     <div class="star">
                                         <img src="../assets/icons/star.svg" alt="">
@@ -110,7 +118,7 @@
                                     <div class="price">
                                         <h3><?php echo $a['harga'] ?></h3>
                                     </div>
-                                    <a href="detail.php"><button>View Detail</button></a>
+                                    <a href="detail.php?id_destinasi=<?php echo $a['id_destinasi'] ?>"><button>View Detail</button></a>
                                 </div>
                             </div>
                         </div>

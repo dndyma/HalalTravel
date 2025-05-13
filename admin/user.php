@@ -26,21 +26,25 @@
 
     <div class="dashboard">
         <div class="dashboard-header">
-            <div class="dashboard-account"><?php session_start(); $_SESSION['username']?></div>
+            <div class="dashboard-account"><?php 
+            session_start(); 
+            if(empty($_SESSION['username'])){
+                echo "null";
+            }else{
+                $_SESSION['username'];
+            } ?></div>
         </div>
         <h1>EDIT USER</h1>
         <div class="dashboard-main">
 
-            <form action="../feature/admin.php" method="POST" enctype="multipart/form-data">
+            <form action="../feature/admin_admin.php" method="POST" enctype="multipart/form-data">
 
                 <label for="Username">Username</label>
-                <input type="text" placeholder='Username' name='Username'>
+                <input type="text" placeholder='Username' name='username'>
                 <label for="email">Email</label>
                 <input type="email" placeholder='email' name='email'>
                 <label for="password">Password</label>
                 <input type="password" placeholder='password' name='password'>
-                <label for="role">Role</label>
-                <input type="text" placeholder='Role' name='Role'>
                 <div>
                     <div></div>
 

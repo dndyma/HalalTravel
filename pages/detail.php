@@ -1,7 +1,13 @@
+<?php
+include '../db/koneksi.php';
+$id = $_GET['id_destinasi'];
+$sql = "SELECT * from destinasi where id_destinasi='$id'";
+$result= $db->query($sql);
+$a = $result->fetch_assoc();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +71,7 @@
     <main>
         <section class="home">
             <div class="container-img">
-                <img src="../assets/img/tajmahal.jpg" alt="" class="img-home">
+                <img src="../uploads/<?php echo $a['gambar'] ?>" alt="" class="img-home">
             </div>
             </div>
         </section>
@@ -73,7 +79,7 @@
         <section class="destination">
             <div class="container-destination">
                 <div class="detail-destination">
-                    <h1 id="destination">Turkey National Park.</h1>
+                    <h1 id="destination"><?php echo $a['lokasi'] ?></h1>
                     <div class="">
                         <img src="../assets/icons/location2.svg" alt="">
                         <p>Turkey , Istanbull</p>
@@ -88,17 +94,7 @@
                     </div>
                 </div>
                 <div class="desc-destination">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima fugit ex tempora, impedit ut ducimus, eius, cumque ea sed quisquam iusto! Explicabo dolorum quaerat libero aliquid inventore corporis at deleniti! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam beatae distinctio blanditiis. Quae suscipit ex voluptatem doloremque? Consequatur deleniti facere, reiciendis a fugit placeat dignissimos eaque labore doloribus illum amet.
-                        Possimus aliquid sequi quos odit magnam velit. Accusantium eum quas incidunt. Cupiditate neque, nobis exercitationem quo, cum voluptates, eligendi commodi perspiciatis quaerat aliquid rem iusto quis numquam. Voluptas, tempore ipsum!
-                        Mollitia eum cumque commodi consequuntur eveniet voluptatem, necessitatibus natus quibusdam obcaecati aliquam quaerat quos quod error repellat voluptatibus dolores praesentium! In magnam et molestiae, voluptatem quae reprehenderit aliquam aliquid vero?
-                        Impedit quae aspernatur ratione ut cum, beatae fugit, cupiditate accusantium perferendis voluptate eveniet dolorum dolores voluptas molestiae unde vitae in, adipisci eius est quidem non. Recusandae at assumenda odit repellendus?
-                        Iste tenetur architecto et qui veritatis, placeat illum excepturi commodi, ducimus officiis enim doloremque officia. Commodi fuga enim magnam autem cupiditate velit reprehenderit a temporibus, rerum iusto, earum accusamus laudantium!
-                        Aperiam explicabo, nisi vel debitis maxime eveniet earum fugit accusantium eius nihil molestias enim ea dolorum accusamus saepe facilis libero numquam voluptatibus, quibusdam, quisquam ut porro eligendi. Non, praesentium eum.
-                        Accusamus et vero id consequatur inventore voluptates dicta, mollitia, deleniti eligendi doloremque beatae non dolores dignissimos reiciendis ea voluptate at nisi optio sequi neque ab perferendis, quo repellat nemo! Fugiat.
-                        Nisi, ipsam voluptas veritatis dignissimos distinctio doloremque corporis quod suscipit excepturi fuga laboriosam quaerat alias repellat tempora amet deserunt eum ullam quas vitae optio sapiente odit. Voluptatibus dolor omnis dignissimos?
-                        Quo ipsa veniam, consequatur quas cupiditate provident enim dolor odio, maxime cum, ipsam minima soluta optio asperiores ducimus voluptatibus voluptate! Inventore eligendi voluptas nostrum modi dicta velit voluptatibus voluptates qui.
-                        Quis tempore in, error aperiam, quod qui voluptatem vero nesciunt expedita nemo illum quae voluptates consequatur, labore placeat. Nihil, dolor? Adipisci aliquam molestiae deserunt dolorem exercitationem reprehenderit eius commodi iusto?</p>
+                    <p><?php echo $a['deskripsi'] ?></p>
                 </div>
             </div>
         </section>

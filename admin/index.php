@@ -40,7 +40,12 @@ session_start();
                     Add destination
                 </button>
             </a>
-            <div class="dashboard-account"><?php echo $_SESSION['username'] ?></div>
+            <div class="dashboard-account"><?php 
+            if(empty($_SESSION['username'])){
+                echo "null";
+            }else{
+                $_SESSION['username'];
+            } ?></div>
 
         </div>
         <div class="dashboard-main">

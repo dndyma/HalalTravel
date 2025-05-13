@@ -26,18 +26,24 @@
 
     <div class="dashboard">
         <div class="dashboard-header">
-            <div class="dashboard-account"><?php session_start(); $_SESSION['username']?></div>
+            <div class="dashboard-account"><?php 
+            session_start(); 
+            if(empty($_SESSION['username'])){
+                echo "null";
+            }else{
+                $_SESSION['username'];
+            } ?></div>
         </div>
         <h1>CREATE DESTINATION</h1>
         <div class="dashboard-main">
 
-            <form action="../feature/admin.php" method="POST" enctype="multipart/form-data">
+            <form action="../feature/admin_destinasi.php" method="POST" enctype="multipart/form-data">
                 <label for="title">Destination Title</label>
                 <input type="text" placeholder='tittle' name='tittle'>
                 <label for="harga">Price</label>
                 <input type="text" placeholder='harga' name='harga'>
                 <label for="desc">Description</label>
-                <input type="text" placeholder='Desc' name='desc'>
+                <input type="text" placeholder='Desc' name='deskripsi'>
                 <label for="ratings">Ratings</label>
                 <input type="number" placeholder='ratings' name='rating'>
                 <div>
