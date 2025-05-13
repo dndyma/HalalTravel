@@ -75,7 +75,7 @@ session_start();
                                 <td><?php echo $a['harga'] ?></td>
                                 <td><?php echo $a['rating'] ?></td>
                                 <td>
-                                    <a href="detail_destinasi.php?id_destanasi=<?php echo $a['id_destinasi'] ?>">
+                                    <a href="../pages/detail.php?id_destinasi=<?php echo $a['id_destinasi'] ?>">
                                         <button>Detail</button>
                                     </a>
                                     <a href="edit/destination.php?id=<?php echo $a['id_destinasi'] ?>">
