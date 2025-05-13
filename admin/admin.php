@@ -16,8 +16,8 @@
                 <h1>Halal<span>Travel</span></h1>
             </li>
             <li><button onclick="window.location.href='index.php'">Dashboard</button></li>
-            <li><button onclick="window.location.href='admin.php'">Admin</button></li>
-            <li><button onclick="window.location.href='destination.php'" class="active">Destination</button></li>
+            <li><button onclick="window.location.href='admin.php'" class="active">Admin</button></li>
+            <li><button onclick="window.location.href='destination.php'">Destination</button></li>
         </div>
         <div>
             <img src="../assets/icons/test.svg" alt="">
@@ -34,23 +34,21 @@
                                                 $_SESSION['username'];
                                             } ?></div>
         </div>
-        <h1>CREATE DESTINATION</h1>
+        <h1>CREATE ADMIN</h1>
         <div class="dashboard-main">
 
-            <form action="../feature/admin_destinasi.php" method="POST" enctype="multipart/form-data">
-                <label for="title">Destination Title</label>
-                <input type="text" placeholder='tittle' name='tittle'>
-                <label for="harga">Price</label>
-                <input type="text" placeholder='harga' name='harga'>
-                <label for="desc">Description</label>
-                <input type="text" placeholder='Desc' name='deskripsi'>
-                <label for="ratings">Ratings</label>
-                <input type="number" placeholder='ratings' name='rating'>
+            <form action="../feature/admin_admin.php" method="POST" enctype="multipart/form-data">
+
+                <label for="Username">Username</label>
+                <input type="text" placeholder='Username' name='username'>
+                <label for="email">Email</label>
+                <input type="email" placeholder='email' name='email'>
+                <label for="password">Password</label>
+                <input type="password" placeholder='password' name='password'>
+                <label for="role">Role</label>
+                <input type="text" placeholder='' name='role' value="admin" disabled style="font-size: medium;color:black;">
                 <div>
-                    <label for="Picture">Picture</label>
-                    <input type="file" value='gambar' name='gambar'>
-                    <label for="lokasi">Location</label>
-                    <input type="text" placeholder='lokasi' name='lokasi'>
+                    <div></div>
 
                     <button type="submit" value='simpan' name='simpan'>Save</button>
                 </div>
